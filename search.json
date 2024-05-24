@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is OMIS Department page"
+  },
+  {
+    "objectID": "functionality.html",
+    "href": "functionality.html",
+    "title": "Functionality",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\nlibrary(dplyr)\n\n\n# Read the Excel file\ndata &lt;- read_excel(\"files/students_participation_tracker_BP.xlsx\")\n\n\n# Clean and process the data\ncleaned_data_good_performers &lt;- data  |&gt; \n  filter(!is.na(teams_score))  |&gt; \n  arrange(desc(teams_score))  |&gt; select(1) |&gt; \n  head(5)\n\n\n# Save the processed data to an RDS file for use in the Quarto document\nsaveRDS(cleaned_data_good_performers, \"cleaned_data_good_performers.rds\")\n\n\n# Clean and process the data\ncleaned_data_bad_performers &lt;- data  |&gt; \n  filter(!is.na(teams_score))  |&gt; \n  arrange(teams_score)  |&gt; select(1) |&gt; \n  head(5)\n\n\n# Save the processed data to an RDS file for use in the Quarto document\nsaveRDS(cleaned_data_bad_performers, \"cleaned_data_bad_performers.rds\")"
+  },
+  {
+    "objectID": "functionality.html#r-markdown",
+    "href": "functionality.html#r-markdown",
+    "title": "Functionality",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\nlibrary(dplyr)\n\n\n# Read the Excel file\ndata &lt;- read_excel(\"files/students_participation_tracker_BP.xlsx\")\n\n\n# Clean and process the data\ncleaned_data_good_performers &lt;- data  |&gt; \n  filter(!is.na(teams_score))  |&gt; \n  arrange(desc(teams_score))  |&gt; select(1) |&gt; \n  head(5)\n\n\n# Save the processed data to an RDS file for use in the Quarto document\nsaveRDS(cleaned_data_good_performers, \"cleaned_data_good_performers.rds\")\n\n\n# Clean and process the data\ncleaned_data_bad_performers &lt;- data  |&gt; \n  filter(!is.na(teams_score))  |&gt; \n  arrange(teams_score)  |&gt; select(1) |&gt; \n  head(5)\n\n\n# Save the processed data to an RDS file for use in the Quarto document\nsaveRDS(cleaned_data_bad_performers, \"cleaned_data_bad_performers.rds\")"
+  }
+]
