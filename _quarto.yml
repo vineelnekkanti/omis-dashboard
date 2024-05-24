@@ -3,12 +3,11 @@ project:
 
 website:
   title: "NIU College of Business"
-  page-navigation: true
-  site-url: https://vineelnekkanti.github.io/omis_dashboard
-  repo-url: https://github.com/vineelnekkanti/omis_dashboard
-  #navbar:
-   right:
-    contents:
+  #page-navigation: true
+  #site-url: https://vineelnekkanti.github.io/omis-dashboard
+  #repo-url: https://github.com/vineelnekkanti/omis-dashboard
+  navbar:
+    right:
       - href: index.qmd
         text: Home
       - href: dashboard.qmd
