@@ -1,0 +1,10 @@
+---
+title: "Department of OMIS"
+format: 
+  dashboard:
+    logo: "images/niu_cob_logo.png"
+---
+
+Welcome to the homepage of OMIS Department.
+
+
